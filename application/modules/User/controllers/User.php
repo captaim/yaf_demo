@@ -15,6 +15,7 @@ class UserController extends Yaf_Controller_Abstract {
     public function indexAction($name = "Stranger") {
         //var_dump('this is User modules userController indexAction');
         //return false;
+        $this->forward('User','User','show');//加载其他模块的控制器中的方法
         $this->getView()->assign('title','UserModule UserController IndexAction');
     }
 
